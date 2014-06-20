@@ -79,11 +79,9 @@ class TopologySlice (EventMixin):
 			
 
 			if packet.dst.is_multicast:
-				""" Floods the packet """
 				flood()
 				log.debug("At %s (input port %d) got multicast packet from %s to %s :", dpid, event.port, packet.src, packet.dst)
 				return
-
 			else:
 				log.debug("At %s (input port %d) got unicast packet from %s to %s",dpid, event.port, packet.src, packet.dst)
 
@@ -120,7 +118,7 @@ class TopologySlice (EventMixin):
 						install_fwdrule(event, packet, 3)
 					else:
 						drop();
-						log.debug("No suitable rule to install")
+						log.debug("No suitable rule to install for this packet, drop it")
 
 				elif dpid == '00-00-00-00-00-04':
 					if packet.dst == h4 and packet.src != h1 and packet.src != h3:
@@ -133,7 +131,7 @@ class TopologySlice (EventMixin):
 						install_fwdrule(event, packet, 1)
 					else:
 						drop();
-						log.debug("No suitable rule to install")
+						log.debug("No suitable rule to install for this packet, drop it")
 				else:
 					log.debug("Unknown switch dpid")
 
