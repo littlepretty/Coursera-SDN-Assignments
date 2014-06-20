@@ -137,7 +137,6 @@ class VideoSlice (EventMixin):
 									outPort = 4
 								else:
 									nextHop = '00-00-00-00-00-02'
-									#outPort = self.adjacency[thisHop][nextHop] # e.g. port 1 for sw1 and sw4
 									outPort = 1
 							else:
 								nextHop = packet.dst
