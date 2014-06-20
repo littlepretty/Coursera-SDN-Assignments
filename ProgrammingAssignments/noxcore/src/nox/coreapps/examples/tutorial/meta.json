@@ -1,0 +1,12 @@
+{
+    "components": [
+        {
+            "name": "tutorial",
+            "library": "tutorial" 
+        },
+        {
+            "name": "pytutorial",
+            "python": "nox.coreapps.examples.tutorial.pytutorial" 
+        }
+    ]
+}
