@@ -1,0 +1,6 @@
+[("PID",(12,True)),("DRP",(0,True)),("inport",(1,True)),("outport",(2147483646,True)),("srcmac",(1234,True)),("dstmac",(4321,True)),("i",(0,True))]
+[("PID",(12,True)),("DRP",(0,True)),("inport",(3,True)),("outport",(2147483644,True)),("srcmac",(6543,True)),("dstmac",(5432,True)),("i",(0,True))]
+[("PID",(12,True)),("DRP",(0,True)),("inport",(4,True)),("outport",(1,True)),("srcmac",(4321,True)),("dstmac",(1234,True)),("i",(0,True))]
+[("PID",(12,True)),("DRP",(0,True)),("inport",(2,True)),("outport",(3,True)),("srcmac",(5432,True)),("dstmac",(6543,True)),("i",(1,True))]
+
+Instructions executed: 18
