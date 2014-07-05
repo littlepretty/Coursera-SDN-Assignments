@@ -42,34 +42,33 @@ from pyretic.modules.mac_learner import mac_learner
 import os
 
 # insert the name of the module and policy you want to import
-from pyretic.examples.mac_learner import <mac_learner>
+# from pyretic.examples.mac_learner import <mac_learner>
 
 policy_file = "%s/pyretic/pyretic/examples/firewall-policies.csv" % os.environ[ 'HOME' ]
 
 def main():
     # Copy the code you used to read firewall-policies.csv from the Pox Firewall assignment
-    policyFileContent = open(policyFile)
+    policyFileContent = open(policy_file)
     # skip first line
     policyFileContent.readline()
-    while True:
-        line = policyFileContent.readline()
-        if not line:
-            break
-        # print line
-        # info[1] == mac_0, info[2] == mac_1
-        info = line.split(',')
-        info[2].strip('\n')
 
     # start with a policy that doesn't match any packets
     not_allowed = none
 
-    # and add traffic that isn't allowed
-    #for <each pair of MAC address in firewall-policies.csv>:
-    #    not_allowed = union( [
-    #        <traffic going in one direction>,
-    #        <traffic going in the other direction> ] )
-    for id_no, src, dst in info:
-        not_allowed = not_allowed + (match(dstmac=MAC(info[2])) >> match(srcmac=MAC(info[1]))) + (match(srcmac=MAC(info[2])) >> match(dstmac=MAC(info[1])))
+    while True:
+        line = policyFileContent.readline()
+        if not line:
+            break
+        print line
+        # info[1] == mac_0, info[2] == mac_1
+        info = line.split(',')
+        info[2].strip('\n')
+
+        # and add traffic that isn't allowed
+        not_allowed = union( [not_allowed, match(dstmac=EthAddr(info[2])) >>
+            match(srcmac=EthAddr(info[1]))] )
+        not_allowed = union( [not_allowed, match(dstmac=EthAddr(info[1])) >>
+            match(srcmac=EthAddr(info[2]))] )
 
     # express allowed traffic in terms of not_allowed - hint use '~'
     allowed = ~not_allowed
