@@ -8,6 +8,7 @@ s1 - s8
 s_i - h_i
 
 [Port Table]
+[Switch to switch]
 s1.p1 - s8.p1
 s1.p2 - s3.p1
 s2.p1 - s5.p3
@@ -19,8 +20,19 @@ s3.p4 - s4.p1
 s4.p2 - s5.p2
 s4.p4 - s7.p3
 s5.p1 - s6.p3
+s5.p4 - s7.p4
 s6.p1 - s8.p3
-s7.p1 = s8.p4
+s7.p1 - s8.p4
+
+[Host to switch]
+h1.p1 - s1.p3
+h2.p1 - s2.p4
+h3.p1 - s3.p5
+h4.p1 - s4.p5
+h5.p1 - s5.p5
+h6.p1 - s6.p4
+h7.p1 - s7.p5
+h8.p1 - s8.p5
 
 
 [Flow]
