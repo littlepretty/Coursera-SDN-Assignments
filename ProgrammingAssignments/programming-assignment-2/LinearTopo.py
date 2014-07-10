@@ -4,6 +4,7 @@ from mininet.topo import Topo
 from mininet.net import Mininet
 from mininet.node import CPULimitedHost
 from mininet.link import TCLink
+from mininet.cli import CLI
 from mininet.util import irange,dumpNodeConnections
 from mininet.log import setLogLevel
 
@@ -40,11 +41,12 @@ def perfTest():
    print "Dumping host connections"
    dumpNodeConnections(net.hosts)
    print "Testing network connectivity"
-   net.pingAll()
+   #net.pingAll()
    print "Testing bandwidth between h1 and h4"
    h1, h4 = net.get('h1', 'h4')
-   net.iperf((h1, h4))
-   net.stop()
+   #net.iperf((h1, h4))
+   #net.stop()
+   CLI(net)
 
 if __name__ == '__main__':
    setLogLevel('info')

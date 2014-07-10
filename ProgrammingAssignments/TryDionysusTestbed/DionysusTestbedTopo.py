@@ -29,8 +29,6 @@ class DionysusTestbedTopo(Topo):
 
         # Create template host, switch, and link
         hconfig = {'inNamespace':True}
-        #http_link_config = {'bw': 1}
-        #video_link_config = {'bw': 10}
 
         switch_link_config = {'bw': 10}
         host_link_config = {}
@@ -39,14 +37,12 @@ class DionysusTestbedTopo(Topo):
         for i in range(8):
             sconfig = {'dpid': "%016x" % (i+1)}
             self.addSwitch('s%d' % (i+1), **sconfig)
-
         # Create host nodes
         for i in range(8):
             self.addHost('h%d' % (i+1), **hconfig)
 
         # Add switch links
         # Specified to the port numbers to avoid any port number consistency issue
-
         self.addLink('h1', 's1', port1=1, port2=3, **host_link_config)
         self.addLink('h2', 's2', port1=1, port2=4, **host_link_config)
         self.addLink('h3', 's3', port1=1, port2=5, **host_link_config)
