@@ -81,7 +81,7 @@ class DTTargetRules (EventMixin):
 			self.install_fwdrule(event, packet, port)
 
 		if packet.src == h6 and packet.dst == h1:
-			port = 0
+			port = 3
 			self.install_fwdrule(event, packet, port)
 
 	def installRuleForSW2(self, event):
@@ -95,7 +95,7 @@ class DTTargetRules (EventMixin):
 			port = 1
 			self.install_fwdrule(event, packet, port)
 		if packet.src == h5 and packet.dst == h2:
-			port = 0
+			port = 4
 			self.install_fwdrule(event, packet, port)
 
 	def installRuleForSW3(self, event):
@@ -109,7 +109,7 @@ class DTTargetRules (EventMixin):
 			port = 3
 			self.install_fwdrule(event, packet, port)
 		if packet.src == h5 and packet.dst == h3:
-			port = 0
+			port = 5
 			self.install_fwdrule(event, packet, port)
 
 		# F1
@@ -132,7 +132,7 @@ class DTTargetRules (EventMixin):
 			port = 2
 			self.install_fwdrule(event, packet, port)
 		if packet.src == h7 and packet.dst == h4:
-			port = 0
+			port = 5
 			self.install_fwdrule(event, packet, port)
 		# F4
 		if packet.src == h5 and packet.dst == h7:
@@ -150,7 +150,7 @@ class DTTargetRules (EventMixin):
 
 		# F2
 		if packet.src == h3 and packet.dst == h5:
-			port = 0
+			port = 5
 			self.install_fwdrule(event, packet, port)
 		if packet.src == h5 and packet.dst == h3:
 			port = 1
@@ -169,12 +169,12 @@ class DTTargetRules (EventMixin):
 			port = 2
 			self.install_fwdrule(event, packet, port)
 		if packet.src == h7 and packet.dst == h5:
-			port = 0
+			port = 5
 			self.install_fwdrule(event, packet, port)
 
 		# F7
 		if packet.src == h2 and packet.dst == h5:
-			port = 0
+			port = 5
 			self.install_fwdrule(event, packet, port)
 		if packet.src == h5 and packet.dst == h2:
 			port = 3
@@ -189,7 +189,7 @@ class DTTargetRules (EventMixin):
 
 		# F1
 		if packet.src == h1 and packet.dst == h6:
-			port = 0
+			port = 4
 			self.install_fwdrule(event, packet, port)
 		if packet.src == h6 and packet.dst == h1:
 			port = 2
@@ -208,11 +208,11 @@ class DTTargetRules (EventMixin):
 			port = 1
 			self.install_fwdrule(event, packet, port)
 		if packet.src == h7 and packet.dst == h6:
-			port = 0
+			port = 4
 			self.install_fwdrule(event, packet, port)
 		# F6
 		if packet.src == h8 and packet.dst == h6:
-			port = 0
+			port = 4
 			self.install_fwdrule(event, packet, port)
 		if packet.src == h6 and packet.dst == h8:
 			port = 1
@@ -226,7 +226,7 @@ class DTTargetRules (EventMixin):
 
 		# F3
 		if packet.src == h4 and packet.dst == h7:
-			port = 0
+			port = 5
 			self.install_fwdrule(event, packet, port)
 		if packet.src == h7 and packet.dst == h4:
 			port = 4
@@ -234,14 +234,14 @@ class DTTargetRules (EventMixin):
 
 		# F4
 		if packet.src == h5 and packet.dst == h7:
-			port = 0
+			port = 5
 			self.install_fwdrule(event, packet, port)
 		if packet.src == h7 and packet.dst == h5:
 			port = 3
 			self.install_fwdrule(event, packet, port)
 		# F5
 		if packet.src == h6 and packet.dst == h7:
-			port = 0
+			port = 5
 			self.install_fwdrule(event, packet, port)
 		if packet.src == h7 and packet.dst == h6:
 			port = 1
@@ -266,7 +266,7 @@ class DTTargetRules (EventMixin):
 			port = 3
 			self.install_fwdrule(event, packet, port)
 		if packet.src == h6 and packet.dst == h8:
-			port = 0
+			port = 5
 			self.install_fwdrule(event, packet, port)
 
 

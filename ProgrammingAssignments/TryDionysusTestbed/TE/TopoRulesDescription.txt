@@ -25,14 +25,14 @@ s6.p1 - s8.p3
 s7.p1 - s8.p4
 
 [Host to switch]
-h1.p1 - s1.p0
-h2.p1 - s2.p0
-h3.p1 - s3.p0
-h4.p1 - s4.p0
-h5.p1 - s5.p0
-h6.p1 - s6.p0
-h7.p1 - s7.p0
-h8.p1 - s8.p0
+h1.p0 - s1.p3
+h2.p0 - s2.p4
+h3.p0 - s3.p5
+h4.p0 - s4.p5
+h5.p0 - s5.p5
+h6.p0 - s6.p4
+h7.p0 - s7.p5
+h8.p0 - s8.p5
 
 
 [Current flow path]

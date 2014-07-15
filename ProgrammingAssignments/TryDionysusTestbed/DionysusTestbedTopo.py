@@ -43,14 +43,14 @@ class DionysusTestbedTopo(Topo):
 
         # Add switch links
         # Specified to the port numbers to avoid any port number consistency issue
-        self.addLink('h1', 's1', port1=1, port2=0, **host_link_config)
-        self.addLink('h2', 's2', port1=1, port2=0, **host_link_config)
-        self.addLink('h3', 's3', port1=1, port2=0, **host_link_config)
-        self.addLink('h4', 's4', port1=1, port2=0, **host_link_config)
-        self.addLink('h5', 's5', port1=1, port2=0, **host_link_config)
-        self.addLink('h6', 's6', port1=1, port2=0, **host_link_config)
-        self.addLink('h7', 's7', port1=1, port2=0, **host_link_config)
-        self.addLink('h8', 's8', port1=1, port2=0, **host_link_config)
+        self.addLink('h1', 's1', port1=0, port2=3, **host_link_config)
+        self.addLink('h2', 's2', port1=0, port2=4, **host_link_config)
+        self.addLink('h3', 's3', port1=0, port2=5, **host_link_config)
+        self.addLink('h4', 's4', port1=0, port2=5, **host_link_config)
+        self.addLink('h5', 's5', port1=0, port2=5, **host_link_config)
+        self.addLink('h6', 's6', port1=0, port2=4, **host_link_config)
+        self.addLink('h7', 's7', port1=0, port2=5, **host_link_config)
+        self.addLink('h8', 's8', port1=0, port2=5, **host_link_config)
 
         self.addLink('s1', 's8', port1=1, port2=1, **switch_link_config)
         self.addLink('s1', 's3', port1=2, port2=1, **switch_link_config)
