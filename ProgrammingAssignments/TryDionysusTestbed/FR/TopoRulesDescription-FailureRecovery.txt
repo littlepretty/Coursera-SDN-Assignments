@@ -36,14 +36,14 @@ h8.p0 - s8.p5
 
 
 [Current flow path]
-h1 - s1 - s3 - s4 - s7 - h7
+h1 - s1 - s8 - s7 - h7
 h2 - s2 - s4 - s5 - h5
 h3 - s3 - s4 - s5 - h5
 h4 - s4 ------ s7 - s7
 h8 - s8 - s6 - s5 - s5
 
 [Target flow path]
-h1 - s1 - s8 - s7 - h7
+h1 - s1 - s3 - s4 - s7 - h7
 h2 - s2 ------ s5 - h5
 h3 - s3 - s6 - s5 - h5
 h4 - s4 - s5 - s7 - s7

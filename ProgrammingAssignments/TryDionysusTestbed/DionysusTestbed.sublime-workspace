@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"cli",
+				"CLI"
+			],
+			[
 				"test",
 				"testbedUpdateRuleValidate"
 			],
@@ -52,18 +56,34 @@
 	"buffers":
 	[
 		{
-			"file": "TopoRulesDescription-FailureRecovery.txt",
+			"file": "DionysusTestbedTopo.py",
 			"settings":
 			{
-				"buffer_size": 751,
+				"buffer_size": 4685,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "TopoRulesDescription.txt",
+			"file": "FR/TopoRulesDescription-FailureRecovery.txt",
+			"settings":
+			{
+				"buffer_size": 773,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "TE/TopoRulesDescription.txt",
 			"settings":
 			{
 				"buffer_size": 858,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "TE/DTTargetRules.py",
+			"settings":
+			{
+				"buffer_size": 8014,
 				"line_ending": "Unix"
 			}
 		}
@@ -95,6 +115,14 @@
 	},
 	"file_history":
 	[
+		"/Users/YJQ/Documents/XcodeDocuments/Coursera-SDN-Assignments/ProgrammingAssignments/TryDionysusTestbed/TE/TopoRulesDescription.txt",
+		"/Users/YJQ/Documents/XcodeDocuments/Coursera-SDN-Assignments/ProgrammingAssignments/TryDionysusTestbed/TE/DTTargetRules.py",
+		"/Users/YJQ/Documents/XcodeDocuments/Coursera-SDN-Assignments/ProgrammingAssignments/TryDionysusTestbed/TE/DTCurrentRules.py",
+		"/Users/YJQ/Documents/XcodeDocuments/Coursera-SDN-Assignments/ProgrammingAssignments/TryDionysusTestbed/FR/TopoRulesDescription-FailureRecovery.txt",
+		"/Users/YJQ/Documents/XcodeDocuments/Coursera-SDN-Assignments/ProgrammingAssignments/TryDionysusTestbed/TE/SimplePingTopo.py",
+		"/Users/YJQ/Documents/XcodeDocuments/Coursera-SDN-Assignments/ProgrammingAssignments/TryDionysusTestbed/TE/SimplePingController.py",
+		"/Users/YJQ/Documents/XcodeDocuments/Coursera-SDN-Assignments/ProgrammingAssignments/TryDionysusTestbed/TopoRulesDescription.txt",
+		"/Users/YJQ/Documents/XcodeDocuments/Coursera-SDN-Assignments/ProgrammingAssignments/TryDionysusTestbed/TopoRulesDescription-FailureRecovery.txt",
 		"/Users/YJQ/Documents/XcodeDocuments/Coursera-SDN-Assignments/ProgrammingAssignments/TryDionysusTestbed/DionysusTestbed.sublime-project",
 		"/Users/YJQ/Documents/XcodeDocuments/Coursera-SDN-Assignments/ProgrammingAssignments/TryDionysusTestbed/TopoRulesDescription.cpp",
 		"/Users/YJQ/Documents/XcodeDocuments/Coursera-SDN-Assignments/ProgrammingAssignments/Programming-Assignment-4/virtualization-assignment/topologySlice.py",
@@ -265,19 +293,49 @@
 			[
 				{
 					"buffer": 0,
-					"file": "TopoRulesDescription-FailureRecovery.txt",
+					"file": "DionysusTestbedTopo.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 751,
+						"buffer_size": 4685,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								584,
-								584
+								1729,
+								1729
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1844.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "FR/TopoRulesDescription-FailureRecovery.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 773,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								616,
+								616
 							]
 						],
 						"settings":
@@ -285,15 +343,15 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 363.0,
+						"translation.y": 344.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "TopoRulesDescription.txt",
+					"buffer": 2,
+					"file": "TE/TopoRulesDescription.txt",
 					"semi_transient": false,
 					"settings":
 					{
@@ -304,8 +362,8 @@
 						"selection":
 						[
 							[
-								775,
-								775
+								735,
+								737
 							]
 						],
 						"settings":
@@ -313,10 +371,39 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 434.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "TE/DTTargetRules.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8014,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7732,
+								7736
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5222.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -398,7 +485,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 188.0,
+	"side_bar_width": 206.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
