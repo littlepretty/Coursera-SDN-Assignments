@@ -1,0 +1,59 @@
+[Host]
+h1 - h8
+
+[Switch]
+s1 - s8
+
+[Link]
+s_i - h_i
+
+[Port Table]
+[Switch to switch]
+s1.p1 - s8.p1
+s1.p2 - s3.p1
+s2.p1 - s5.p3
+s2.p2 - s4.p3
+s2.p3 - s7.p2
+s3.p2 - s8.p2
+s3.p3 - s6.p2
+s3.p4 - s4.p1
+s4.p2 - s5.p2
+s4.p4 - s7.p3
+s5.p1 - s6.p3
+s5.p4 - s7.p4
+s6.p1 - s8.p3
+s7.p1 - s8.p4
+
+[Host to switch]
+h1.p1 - s1.p0
+h2.p1 - s2.p0
+h3.p1 - s3.p0
+h4.p1 - s4.p0
+h5.p1 - s5.p0
+h6.p1 - s6.p0
+h7.p1 - s7.p0
+h8.p1 - s8.p0
+
+
+[Current flow path]
+h1 - s1 - s8 - s6 - h6  
+h2 - s2 - s4 - s5 - h5
+h3 - s3 - s4 - s5 - h5
+h4 - s4 ------ s7 - h7
+h5 - s5 - s2 - s7 - h7
+h6 - s6 - s5 - s7 - h7
+h8 - s8 - s3 - s6 - h6
+
+[Target flow path]
+h1 - s1 - s3 - s6  -h6
+h2 - s2 ------ s5 - h5
+h3 - s3 - s6 - s5 - h5
+h4 - s4 - s5 - s7 - h7
+h5 - s5 - s4 - s7 - h7
+h6 - s6 - s8 - s7 - h7
+h8 - s8 ------ s6 - h6
+
+
+
+[Ping test]
+ping h1 - h6, h2 - h5, h3 - h5, h4 - h7, h5 - h7, h6 - h7, h8 - h6
