@@ -90,7 +90,6 @@ def startNetwork():
 
 
     info('** Running CLI\n')
-    CLI(net)
 
 
 def stopNetwork():
@@ -132,11 +131,15 @@ def networkReachableTest():
 
         outputString = h8.cmd('ping', '-c6', h6.IP())
         print outputString
+        CLI(net)
+
 
 def testbedUpdateRuleValidate():
     startNetwork()
     networkReachableTest()
-    stopNetwork()
+
+    
+    # stopNetwork()
 
 if __name__ == '__main__':
     # Force cleanup on exit by registering a cleanup function
@@ -144,4 +147,12 @@ if __name__ == '__main__':
 
     # Tell mininet to print useful information
     setLogLevel('info')
-    startNetwork()
+    
+    # startNetwork()
+    testbedUpdateRuleValidate()
+
+
+
+
+
+

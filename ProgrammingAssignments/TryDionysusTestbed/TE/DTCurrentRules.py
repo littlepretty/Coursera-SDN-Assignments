@@ -165,10 +165,10 @@ class DTCurrentRules (EventMixin):
 		# F2
 		if packet.src == h3 and packet.dst == h5:
 			port = 5
-			self.install_rule(event ,packet.src, packet.dst, port)
+			self.install_fwdrule(event, packet, port)
 		if packet.src == h5 and packet.dst == h3:
 			port = 2
-			self.install_rule(event ,packet.src, packet.dst, port)
+			self.install_fwdrule(event, packet, port)
 
 		# F4
 		if packet.src == h5 and packet.dst == h7:
@@ -307,7 +307,7 @@ class DTCurrentRules (EventMixin):
 
 
 	def _handle_ConnectionUp(self, event):
-		dpid = dpidToStr(event.dpid)
+		dpid = dpid_to_str(event.dpid)
 		log.debug("Switch %s has come up.", dpid)
 
 
