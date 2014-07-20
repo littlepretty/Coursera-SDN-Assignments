@@ -472,7 +472,9 @@ function nox {
     # Apply patches
     git checkout -b tutorial-destiny
     git am $MININET_DIR/mininet/util/nox-patches/*tutorial-port-nox-destiny*.patch
-    if [ "$DIST" = "Ubuntu" ] && [ `expr $RELEASE '>=' 12.04` = 1 ]; then
+
+    # Do not patch this when $RELEASE is 13.04 or higher
+    if [ "$DIST" = "Ubuntu" ] && [ `expr $RELEASE '==' 12.04` = 1 ]; then
         git am $MININET_DIR/mininet/util/nox-patches/*nox-ubuntu12-hacks.patch
     fi
 
