@@ -1,0 +1,16 @@
+patch in SWIG-generated code 
+
+build/src/nox/netapps/topology/pytopology_wrap.cc:4601:
++#define SWIGPY_SLICE_ARG(obj) ((PySliceObject*) (obj))
+
+build/src/nox/netapps/routing/pyrouting_wrap.cc:4641:
++#define SWIGPY_SLICE_ARG(obj) ((PySliceObject*) (obj))
+
+build/src/nox/netapps/switch_management/pyswitch_management_wrap.cc:4692:
++#define SWIGPY_SLICE_ARG(obj) ((PySliceObject*) (obj))
+
+build/src/nox/netapps/authenticator/pyflowutil_wrap.cc:4904:
++#define SWIGPY_SLICE_ARG(obj) ((PySliceObject*) (obj))
+
+build/src/nox/netapps/authenticator/pyauth_wrap.cc:4558:
++#define SWIGPY_SLICE_ARG(obj) ((PySliceObject*) (obj))
