@@ -1,0 +1,25 @@
+in 
+src/nox/netapps/user_event_log/user_event_log_proxy.cc
+src/nox/netapps/bindings_storage/bindings_storage_proxy.cc
+src/nox/netapps/storage/pystorage.cc
+src/nox/coreapps/pyrt/oxidereactor.cc
+src/nox/coreapps/pyrt/pycontext.cc
+
++ using boost::intrusive_ptr;
++ using boost::intrusive_ptr_add_ref;
++ using boost::intrusive_ptr_release;
+
+in
+src/nox/coreapps/pyrt/deferredcallback.cc
+-return SWIG_Python_NewPointerObj(cb, s, SWIG_POINTER_OWN | 0);
++return SWIG_Python_NewPointerObj(m, cb, s, SWIG_POINTER_OWN | 0);
+
+in
+src/nox/coreapps/pyrt/pyrt.cc
+-PyObject* pyctxt = SWIG_Python_NewPointerObj(p, s, 0);
++PyObject* pyctxt = SWIG_Python_NewPointerObj(m, p, s, 0);
+
+src/nox/coreapps/pyrt/pyglue.cc
+-return SWIG_Python_NewPointerObj(f, s, SWIG_POINTER_OWN | 0);
++return SWIG_Python_NewPointerObj(m, f, s, SWIG_POINTER_OWN | 0);
+
