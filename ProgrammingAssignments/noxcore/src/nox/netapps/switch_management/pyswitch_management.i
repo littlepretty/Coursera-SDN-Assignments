@@ -18,8 +18,6 @@
 
 %module "nox.netapps.pyswitch_management"
 
-// Hack to get it to compile -BL
-%include "std_list.i"
 %{
 #include "switch_management_proxy.hh"
 #include "pyrt/pycontext.hh"

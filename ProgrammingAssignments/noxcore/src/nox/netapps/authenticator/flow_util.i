@@ -32,7 +32,6 @@ using namespace vigil::applications;
 %}
 
 %include "common-defs.i"
-%include "std_list.i"
 
 %import "netinet/netinet.i"
 %import "pyrt/event.i"

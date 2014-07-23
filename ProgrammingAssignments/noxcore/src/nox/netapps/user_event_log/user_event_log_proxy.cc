@@ -29,6 +29,10 @@ using namespace std;
 using namespace vigil;
 using namespace vigil::applications;
 
+using boost::intrusive_ptr;
+using boost::intrusive_ptr_add_ref;
+using boost::intrusive_ptr_release;
+
 namespace {
 Vlog_module lg("user_event_log_proxy");
 }

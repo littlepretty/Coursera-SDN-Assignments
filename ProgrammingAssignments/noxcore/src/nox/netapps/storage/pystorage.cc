@@ -34,6 +34,10 @@ using namespace vigil;
 using namespace vigil::applications;
 using namespace vigil::applications::storage;
 
+using boost::intrusive_ptr;
+using boost::intrusive_ptr_add_ref;
+using boost::intrusive_ptr_release;
+
 static Vlog_module lg("pystorage");
 
 PyStorage::PyStorage(PyObject* ctxt)
