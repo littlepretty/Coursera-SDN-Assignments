@@ -1,0 +1,40 @@
+MODULE main
+  VAR
+    policy	: {policy_2,policy_1};
+    infected	: boolean;
+  ASSIGN
+    init(policy) := policy_2;
+    init(infected) := FALSE;
+    next(policy) :=
+	case
+		infected	: policy_1;
+		TRUE	: policy_2;
+	esac;
+    next(infected) :=
+	case
+		TRUE	: {FALSE,TRUE};
+		TRUE	: infected;
+	esac;
+--  
+-- 
+-- =====================================================================
+-- PolicyName (used in NuSMV) to ActualPolicy (used in Pyretic) Mapping
+-- =====================================================================
+-- ---------------------------------------------
+-- policy_1: (shown below)
+-- ---------------------------------------------
+-- drop
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+-- policy_2: (shown below)
+-- ---------------------------------------------
+-- identity
+-- ---------------------------------------------
+-- 
+-- 
+FAIRNESS
+  infected;
+SPEC AG (infected -> AX policy=policy_1)
+SPEC AG (!infected -> AX policy=policy_2)
+SPEC A [ policy=policy_2 U infected ]

@@ -1,0 +1,62 @@
+MODULE main
+  VAR
+    policy	: {policy_1,policy_3,policy_2};
+    infected	: boolean;
+    exempt	: boolean;
+  ASSIGN
+    init(policy) := policy_3;
+    init(infected) := FALSE;
+    init(exempt) := FALSE;
+    next(policy) :=
+	case
+		exempt & infected	: policy_1;
+		infected	: policy_2;
+		TRUE	: policy_3;
+	esac;
+    next(infected) :=
+	case
+		TRUE	: {FALSE,TRUE};
+		TRUE	: infected;
+	esac;
+    next(exempt) :=
+	case
+		TRUE	: {FALSE,TRUE};
+		TRUE	: exempt;
+	esac;
+--  
+-- 
+-- =====================================================================
+-- PolicyName (used in NuSMV) to ActualPolicy (used in Pyretic) Mapping
+-- =====================================================================
+-- ---------------------------------------------
+-- policy_1: (shown below)
+-- ---------------------------------------------
+-- sequential:
+--     union:
+--         match: ('dstip', 10.0.0.1)
+--         match: ('dstip', 10.0.0.2)
+--     modify: ('dstip', 10.0.0.3)
+--     modify: ('dstmac', 00:00:00:00:00:03)
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+-- policy_2: (shown below)
+-- ---------------------------------------------
+-- drop
+-- ---------------------------------------------
+-- 
+-- ---------------------------------------------
+-- policy_3: (shown below)
+-- ---------------------------------------------
+-- identity
+-- ---------------------------------------------
+-- 
+-- 
+FAIRNESS
+  infected;
+FAIRNESS
+  exempt;
+SPEC AG (infected & !exempt -> AX policy=policy_2)
+SPEC AG (infected & exempt -> AX policy=policy_1)
+SPEC AG (!infected -> AX policy=policy_3)
+SPEC A [ policy=policy_3 U infected ]
